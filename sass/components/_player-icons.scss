@@ -1,0 +1,13 @@
+.player-icon {
+    display: block;
+    aspect-ratio: 1;
+    width: 50px;
+
+    &.lg {
+        width: 100px;
+    }
+
+    &.sm {
+        width: 32px;
+    }
+}

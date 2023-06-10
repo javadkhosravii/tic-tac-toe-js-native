@@ -1,0 +1,29 @@
+/* reset default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'mb';
+    font-weight: normal;
+}
+
+/* reset */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    background: #E4E4E4;
+    font-family: 'yr';
+    text-align: center;
+    direction: rtl;
+}

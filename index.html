@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="/css/style.min.css">    
+</head>
+<body>
+    <div class="container">
+        <section id="start-section" class="show">
+            <div class="icons">
+                <img class="player-icon lg" src="/icons/x-mark.svg" alt="">
+                <img class="player-icon lg" src="/icons/o-mark.svg" alt="">
+            </div>
+            <h1 class="title">بازی دوز</h1>
+            <button class="btn" id="start-btn">
+                <div class="text">شروع بازی</div>
+            </button>
+        </section>
+
+        <section id="select-section" class="">
+            <p class="label">مهره خودتو انتخاب کن:</p>
+            <div class="icons">
+                <div>
+                    <img class="player-icon lg" src="/icons/x-mark.svg" alt="">
+                    <input type="radio" name="player" value="x" checked>
+                </div>
+                <div>
+                    <img class="player-icon lg" src="/icons/o-mark.svg" alt="">
+                    <input type="radio" name="player" value="o">
+                </div>
+            </div>
+            <button class="btn" id="select-btn">
+                <div class="text">برو بریم</div>
+            </button>
+        </section>
+
+        <section id="play-section">
+            <p class="label">
+                <span>نوبت بازی:</span>
+                <img class="player-icon player-x show" src="/icons/x-mark.svg" alt="">
+                <img class="player-icon player-o" src="/icons/o-mark.svg" alt="">
+            </p>
+            <div id="board"></div>
+            <button class="btn" id="reset-btn">
+                <div class="text">شروع مجدد</div>
+            </button>
+        </section>
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <div class="container">
+            <p>طراحی شده در آکادمی صدریکس</p>
+        </div>
+    </footer>
+
+
+    <!-- link external js -->
+    <script src="/main.js"></script>
+</body>
+</html>

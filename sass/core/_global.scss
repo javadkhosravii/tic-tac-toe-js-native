@@ -1,0 +1,18 @@
+@import './fonts';
+@import './colors';
+@import './reset';
+
+/* global css */
+.container {
+    margin: 0 auto;
+    width: calc(100% - 32px);
+    max-width: 320px;
+}
+
+.title {
+    color: $blue;
+    font-size: 64px;
+    line-height: 48px;
+    font-family: 'mb';
+    text-shadow: 0 6px 0 white;
+}

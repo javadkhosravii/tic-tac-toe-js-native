@@ -1,0 +1,125 @@
+@import './core/global';
+@import './components/button';
+@import './components/player-icons';
+@import './layouts/footer';
+
+section {
+    display: none;
+    height: calc(100vh - 72px);
+
+    &.show {
+        display: grid;
+        align-content: center;
+        justify-items: center;
+        gap: 56px;
+    }
+
+    &#start-section {
+        justify-items: center;
+
+        .icons {
+            display: grid;
+            justify-content: center;
+            gap: 56px;
+            grid-template-columns: repeat(2, 100px);
+        }
+    }
+
+    &#select-section {
+        
+        .icons {
+            display: grid;
+            justify-content: center;
+            gap: 56px;
+            grid-template-columns: repeat(2, 100px);
+
+            div {
+                display: grid;
+                gap: 56px;
+                justify-items: center;
+
+                input {
+                    width: 24px;
+                    height: 24px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    &#play-section {
+        .label {
+            .player-icon {
+                display: none;
+                margin-right: 16px;
+                
+                &.show {
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+            }
+        }
+
+        #board {
+            display: grid;
+            grid-template-columns: repeat(3, 96px);
+            gap: 16px;
+
+            .cell {
+                width: 96px;
+                height: 96px;
+                border-radius: 8px;
+                background-color: white;
+                display: grid;
+                justify-content: center;
+                align-content: center;
+                cursor: pointer;
+                transition: 0.3s ease;
+
+                .player-icon {
+                    display: none;
+                }
+
+                &.disabled {
+                    opacity: .5;
+                    cursor: default;
+                }
+
+                &.player-x,
+                &.player-o {
+                    cursor: default;
+                }
+
+                &.player-x {
+                    .player-x {
+                        display: block;
+                    }
+                }
+
+                &.player-o {
+                    .player-o {
+                        display: block;
+                    }
+                }
+
+                &.win {
+                    .player-icon {
+                        filter: brightness(0) invert(1);
+                    }
+
+                    &.player-x {
+                        background: $blue-gradient;
+                    }
+
+                    &.player-o {
+                        background: $orange-gradient;
+                    }
+                }
+
+                &:hover:not(.disabled):not(.player-x):not(.player-o):not(.win) {
+                    background-color: #f4f4f4;
+                }
+            }
+        }
+    }
+}
