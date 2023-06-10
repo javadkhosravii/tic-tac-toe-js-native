@@ -14,4 +14,5 @@ You can play this game just by cloning this repo on your device and oppening ind
 2. Sadra Hoseini ([Sadrix GitHub](https://github.com/sadrix))
 
 ![tic tac toe game](/assets/img-2.png)
+![tic tac toe game](/assets/img-3.png)
 ![tic tac toe game](/assets/img-4.png)
