@@ -96,7 +96,17 @@ function updateBoardCells() {
 }
 
 function updateBoardLabel() {
-    if (player == PLAYER.X) {
+    if (finished)
+        BOARD_LABEL_TEXT.textContent = 'برنده بازی:'
+    else if (Object.keys(moves).length === 9)
+        BOARD_LABEL_TEXT.textContent = 'بازی برابر شد!'
+    else
+        BOARD_LABEL_TEXT.textContent = 'نوبت بازی:'
+
+    if (Object.keys(moves).length === 9 && !finished) {
+        BOARD_LABEL_X_PLAYER.classList.add('show')
+        BOARD_LABEL_O_PLAYER.classList.add('show')
+    } else if (player == PLAYER.X) {
         BOARD_LABEL_X_PLAYER.classList.add('show')
         BOARD_LABEL_O_PLAYER.classList.remove('show')
     } else {
@@ -127,7 +137,7 @@ function checkGameState() {
 }
 
 function createBoardCell(index) {
-    let classes = ['cell'];
+    let classes = ['cell', player];
     if (moves.hasOwnProperty(index)) {
         if (moves[index] == PLAYER.X)
             classes.push('player-x')
@@ -139,7 +149,8 @@ function createBoardCell(index) {
             classes.push('win')
         else
             classes.push('disabled')
-    }
+    } else if (Object.keys(moves).length === 9)
+        classes.push('disabled')
 
     let cell = document.createElement('div')
     cell.className = classes.join(' ')
@@ -148,7 +159,7 @@ function createBoardCell(index) {
         `<img class="player-icon player-o" src="/icons/o-mark.svg">`
     ].join('')
 
-    if (!finished && classes.length === 1)
+    if (!finished && classes.length === 2)
         cell.onclick = () => handlePlayerMove(index)
     
     return cell

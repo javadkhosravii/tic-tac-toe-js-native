@@ -118,6 +118,14 @@ section {
 
                 &:hover:not(.disabled):not(.player-x):not(.player-o):not(.win) {
                     background-color: #f4f4f4;
+                    
+                    &.o {
+                        cursor: url("/icons/o-mark.svg") 16 16, pointer;
+                    }
+
+                    &.x {
+                        cursor: url("/icons/x-mark.svg") 16 16, pointer;
+                    }
                 }
             }
         }
