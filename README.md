@@ -1,7 +1,7 @@
 ![tic tac toe game](/assets/img-1.png)
 # Tic Tac Toe game
-This game created with JS native and HTML/CSS only codes.
-You can play this game just by cloning this repo on your device and oppening index.html.
+This game was created with JS native and HTML/CSS-only codes.
+You can play this game just by cloning this repo on your device and opening index.html.
 
 ## Tecnologies
 * HTML
