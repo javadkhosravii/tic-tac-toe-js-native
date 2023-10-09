@@ -6,7 +6,7 @@ const PLAYER = {
     O: 'o',
 }
 
-// states
+// states object
 const STATE = {
     START: 'start',
     SELECT: 'select',
